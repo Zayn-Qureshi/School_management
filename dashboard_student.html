@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Student Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="student-layout">
+    <!-- Sidebar -->
+    <aside class="st-sidebar">
+      <div class="st-brand">
+        <div class="st-logo">🎓</div>
+        <div class="st-name">Student</div>
+      </div>
+      <nav class="st-nav">
+        <button class="st-item active">🏠 Dashboard</button>
+        <button class="st-item">📚 My Courses</button>
+        <button class="st-item">📊 Grades</button>
+        <button class="st-item">📅 Schedule</button>
+        <button class="st-item">📝 Assignments</button>
+        <button class="st-item">✉️ Messages</button>
+        <button class="st-item">👤 Profile</button>
+      </nav>
+    </aside>
+
+    <!-- Main -->
+    <main class="st-main">
+      <!-- Header / Top summary -->
+      <header class="st-header">
+        <div>
+          <h1>Welcome back, Sarah Connor</h1>
+          <p class="subtle">Student Dashboard</p>
+        </div>
+        <div class="st-summary-cards">
+          <div class="st-card">
+            <div class="label">GPA</div>
+            <div class="value" id="gpaValue">3.8</div>
+          </div>
+          <div class="st-card">
+            <div class="label">Attendance</div>
+            <div class="value" id="attendanceValue">95%</div>
+          </div>
+          <div class="st-card">
+            <div class="label">Pending Assignments</div>
+            <div class="value" id="pendingAssignments">4</div>
+          </div>
+          <div class="st-card">
+            <div class="label">Upcoming Tests</div>
+            <div class="value" id="upcomingTests">2</div>
+          </div>
+        </div>
+      </header>
+
+      <section class="st-grid">
+        <!-- Left column -->
+        <div class="st-left">
+          <!-- My Courses -->
+          <div class="st-card courses-card">
+            <h2>My Courses</h2>
+            <div class="course-row">
+              <div class="course-name">Mathematics</div>
+              <div class="course-progress">
+                <div class="progress-bar"><div class="progress-fill" style="width:85%"></div></div>
+                <div class="progress-value">85%</div>
+              </div>
+            </div>
+
+            <div class="course-row">
+              <div class="course-name">Science</div>
+              <div class="course-progress">
+                <div class="progress-bar"><div class="progress-fill" style="width:60%"></div></div>
+                <div class="progress-value">60%</div>
+              </div>
+            </div>
+
+            <div class="course-row">
+              <div class="course-name">History</div>
+              <div class="course-progress">
+                <div class="progress-bar"><div class="progress-fill" style="width:45%"></div></div>
+                <div class="progress-value">45%</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Grades -->
+          <div class="st-card grades-card">
+            <h2>Recent Grades</h2>
+            <ul>
+              <li>
+                <div class="grade-meta"><span class="subject">Mathematics</span><span class="assignment">Homework 1</span></div>
+                <div class="grade-right"><span class="grade">A</span><span class="date">Oct 26</span></div>
+              </li>
+              <li>
+                <div class="grade-meta"><span class="subject">English</span><span class="assignment">Essay Draft</span></div>
+                <div class="grade-right"><span class="grade">B</span><span class="date">Oct 24</span></div>
+              </li>
+              <li>
+                <div class="grade-meta"><span class="subject">Science</span><span class="assignment">Quiz 2</span></div>
+                <div class="grade-right"><span class="grade">B</span><span class="date">Oct 22</span></div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Assignments Due -->
+          <div class="st-card assignments-card">
+            <h2>Assignments Due</h2>
+            <ul>
+              <li>Finish Math problems <span class="due">Due: Oct 28</span></li>
+              <li>Read Chapter 5 for History <span class="due">Due: Oct 29</span></li>
+              <li>Science Project <span class="due">Due: Oct 30</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right column -->
+        <aside class="st-right">
+          <!-- Upcoming Schedule -->
+          <div class="st-card schedule-card">
+            <h2>Upcoming Schedule</h2>
+            <div class="schedule-day">Today, Oct 27</div>
+            <ul>
+              <li><strong>9:00 AM</strong> — Mathematics: English Literature</li>
+              <li><strong>11:00 AM</strong> — Chemistry Lab</li>
+            </ul>
+          </div>
+
+          <!-- Quick actions -->
+          <div class="st-card quick-actions">
+            <h2>Quick Actions</h2>
+            <button class="btn-primary" id="viewCoursesBtn">View My Courses</button>
+            <button class="btn-outline" id="openAssignmentsBtn">Open Assignments</button>
+            <button class="btn-outline" id="messageTeacherBtn">Message Teacher</button>
+          </div>
+        </aside>
+      </section>
+    </main>
+  </div>
+
+  <script src="dashboard_student.js"></script>
+</body>
+</html>

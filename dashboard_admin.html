@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="admin-layout">
+    <!-- Sidebar -->
+    <aside class="ad-sidebar">
+      <div class="ad-brand">
+        <div class="ad-logo">🎓</div>
+        <div class="ad-name">Admin</div>
+      </div>
+      <nav class="ad-nav">
+        <button class="ad-item active">🏠 Dashboard</button>
+        <button class="ad-item">👤 Users</button>
+        <button class="ad-item">🎒 Students</button>
+        <button class="ad-item">👩‍🏫 Teachers</button>
+        <button class="ad-item">📚 Classes</button>
+        <button class="ad-item">📊 Reports</button>
+        <button class="ad-item">⚙️ Settings</button>
+        <button class="ad-item">📈 Analytics</button>
+      </nav>
+    </aside>
+
+    <!-- Main -->
+    <main class="ad-main">
+      <header class="ad-header">
+        <h1>Admin Dashboard</h1>
+        <div class="ad-profile">AD</div>
+      </header>
+
+      <!-- Top summary cards -->
+      <section class="ad-summaries">
+        <div class="summary-card">
+          <div class="summary-label">Total Students</div>
+          <div class="summary-value" id="totalStudents">1,245</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-label">Total Teachers</div>
+          <div class="summary-value" id="totalTeachers">87</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-label">Active Classes</div>
+          <div class="summary-value" id="activeClasses">42</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-label">System Status</div>
+          <div class="summary-value status-online" id="systemStatus">Online</div>
+        </div>
+      </section>
+
+      <!-- Main content grid -->
+      <section class="ad-grid">
+        <!-- Left column: charts -->
+        <div class="ad-left">
+          <div class="card chart-card">
+            <div class="card-header">
+              <h3>Enrollment Trends</h3>
+            </div>
+            <canvas id="enrollmentChart" height="140"></canvas>
+          </div>
+
+          <div class="card stats-row">
+            <div class="mini-card">
+              <h4>Attendance</h4>
+              <canvas id="attendanceChart" width="120" height="120"></canvas>
+            </div>
+
+            <div class="mini-card">
+              <h4>Performance by Subject</h4>
+              <canvas id="performanceChart" height="140"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right column: activities, user management, alerts -->
+        <aside class="ad-right">
+          <div class="card activities">
+            <div class="card-header">
+              <h3>Recent Activities</h3>
+            </div>
+            <ul>
+              <li><strong>John Doe</strong> added 10 new students <span class="time">2 hrs ago</span></li>
+              <li><strong>Jane Smith</strong> updated class schedule <span class="time">1 hr ago</span></li>
+            </ul>
+          </div>
+
+          <div class="card user-mgmt">
+            <div class="card-header">
+              <h3>User Management</h3>
+            </div>
+            <div class="mgmt-actions">
+              <button class="btn-primary" id="addStudentBtn">Add Student</button>
+              <button class="btn-outline" id="manageRolesBtn">Manage Roles</button>
+            </div>
+          </div>
+
+          <div class="card alerts">
+            <div class="card-header">
+              <h3>System Alerts</h3>
+            </div>
+            <ul>
+              <li>Server maintenance scheduled <strong>(Tomorrow)</strong></li>
+              <li>New update available <strong>(Today)</strong></li>
+            </ul>
+          </div>
+
+          <div class="card quick-actions-col">
+            <h3>Quick Actions</h3>
+            <button class="btn-primary full" id="viewReportsBtn">View Reports</button>
+            <button class="btn-outline full" id="manageClassesBtn">Manage Classes</button>
+          </div>
+        </aside>
+      </section>
+    </main>
+  </div>
+
+  <script src="dashboard_admin.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

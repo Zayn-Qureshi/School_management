@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Teacher Dashboard - Sarah Chen</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="dashboard-layout">
+    <!-- Sidebar -->
+    <aside class="td-sidebar">
+      <div class="td-brand">
+        <div class="td-logo">📘</div>
+        <div class="td-brand-name">Teacher</div>
+      </div>
+      <nav class="td-nav">
+        <button class="nav-item active"><span class="icon">🏠</span><span class="label">Dashboard</span></button>
+        <button class="nav-item"><span class="icon">👥</span><span class="label">Students</span></button>
+        <button class="nav-item"><span class="icon">✅</span><span class="label">Attendance</span></button>
+        <button class="nav-item"><span class="icon">📋</span><span class="label">Assignments</span></button>
+        <button class="nav-item"><span class="icon">📅</span><span class="label">Schedule</span></button>
+        <button class="nav-item"><span class="icon">📚</span><span class="label">Resources</span></button>
+      </nav>
+    </aside>
+
+    <!-- Main -->
+    <main class="td-main">
+      <!-- Header -->
+      <header class="td-header">
+        <h1 class="td-title">Teacher Dashboard - Sarah Chen</h1>
+        <div class="td-profile">SC</div>
+      </header>
+
+      <!-- Stats -->
+      <section class="td-stats">
+        <div class="stat">Total Classes<span class="stat-value">5</span></div>
+        <div class="stat">Total Students<span class="stat-value">142</span></div>
+        <div class="stat">Pending Grading<span class="stat-value">18</span></div>
+        <div class="stat">Today's Classes<span class="stat-value">3</span></div>
+      </section>
+
+      <section class="td-content">
+        <div class="left-column">
+          <!-- My Classes -->
+          <section class="td-card classes-card">
+            <h2>My Classes</h2>
+            <div class="class-list">
+              <div class="class-item">
+                <div class="class-meta">
+                  <div class="class-icon">📘</div>
+                  <div>
+                    <div class="class-title">Science 7B</div>
+                    <div class="class-sub">24 students • 2 assignments</div>
+                  </div>
+                </div>
+                <button class="btn-outline">View</button>
+              </div>
+
+              <div class="class-item">
+                <div class="class-meta">
+                  <div class="class-icon">📘</div>
+                  <div>
+                    <div class="class-title">English 7C</div>
+                    <div class="class-sub">28 students • 3 assignments</div>
+                  </div>
+                </div>
+                <button class="btn-outline">View</button>
+              </div>
+            </div>
+          </section>
+
+          <!-- Charts -->
+          <section class="td-card charts-row">
+            <div class="chart-box performance">
+              <h3>Student Performance</h3>
+              <div class="grade-bars">
+                <div class="bar-row"><span class="label">A</span><div class="bar"><div class="fill" style="width:45%"></div></div><span class="value">45%</span></div>
+                <div class="bar-row"><span class="label">B</span><div class="bar"><div class="fill" style="width:30%"></div></div><span class="value">30%</span></div>
+                <div class="bar-row"><span class="label">C</span><div class="bar"><div class="fill" style="width:15%"></div></div><span class="value">15%</span></div>
+                <div class="bar-row"><span class="label">D</span><div class="bar"><div class="fill" style="width:6%"></div></div><span class="value">6%</span></div>
+                <div class="bar-row"><span class="label">F</span><div class="bar"><div class="fill" style="width:4%"></div></div><span class="value">4%</span></div>
+              </div>
+            </div>
+
+            <div class="chart-box attendance">
+              <h3>Attendance Overview</h3>
+              <div class="attendance-ring" data-value="98">
+                <svg viewBox="0 0 36 36" class="circular-chart orange">
+                  <path class="circle-bg"
+                        d="M18 2.0845
+                           a 15.9155 15.9155 0 0 1 0 31.831
+                           a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  <path class="circle"
+                        stroke-dasharray="98,100"
+                        d="M18 2.0845
+                           a 15.9155 15.9155 0 0 1 0 31.831
+                           a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  <text x="18" y="20.35" class="percentage">98%</text>
+                </svg>
+              </div>
+            </div>
+          </section>
+
+          <!-- Recent Submissions -->
+          <section class="td-card submissions">
+            <h2>Recent Submissions</h2>
+            <ul>
+              <li>John M - Math 8A HW Chapter 5 <button class="btn-small">Review</button></li>
+              <li>Emily R - Science Project <button class="btn-small">Review</button></li>
+            </ul>
+          </section>
+        </div>
+
+        <aside class="right-column">
+          <!-- Today's Schedule -->
+          <section class="td-card schedule">
+            <h2>Today's Schedule</h2>
+            <ul>
+              <li><strong>8:00 - 8:45 AM</strong> Math 8A</li>
+              <li><strong>9:00 - 9:45 AM</strong> Science 7B</li>
+              <li><strong>10:00 - 10:45 AM</strong> English 7C</li>
+            </ul>
+          </section>
+
+          <!-- Quick Actions -->
+          <section class="td-card quick-actions">
+            <button class="btn-primary" id="takeAttendanceBtn">Take Attendance</button>
+            <button class="btn-primary" id="gradeAssignmentsBtn">Grade Assignments</button>
+            <button class="btn-primary" id="postAnnouncementBtn">Post Announcement</button>
+          </section>
+        </aside>
+      </section>
+    </main>
+  </div>
+
+  <script src="dashboard_teacher.js"></script>
+</body>
+</html>
