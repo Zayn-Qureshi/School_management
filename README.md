@@ -1,10 +1,7 @@
-Here you go, Zayn — a polished `README.md` file tailored for your **School Management System** project. It includes everything recruiters need: live demo link, login credentials, features, tech stack, and file structure.
-
----
 
 ## 🏫 School Management System
 
-A modular, web-based school management system with separate dashboards for Admin, Teacher, and Student roles. Built using HTML, CSS, and JavaScript, this project demonstrates clean UI design, role-based navigation, and responsive layout.
+A modular, web-based school management system with separate dashboards for Admin, Teacher, and Student roles for authentication and validation. Built using HTML, CSS, and JavaScript, this project demonstrates clean UI design, role-based navigation, and responsive layout.
 
 ---
 
