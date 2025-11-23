@@ -1,81 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Sign In — School Management System</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  
 </head>
+
 <body>
-  <div class="login-outer">
-    <!-- Left welcome panel -->
-    <div class="login-outer">
-  <div class="login-container">
-    <div class="login-left">
-      <div class="left-content">
-        <h2>Welcome to School Management System</h2>
-        <div class="icons-row">📚 🎓 ⚙️</div>
+  <div class="login-wrapper">
+    <!-- Left Side: Image -->
+    <div class="login-image">
+      <div class="image-overlay">
+        <div class="overlay-content">
+          <h2>Excellence in Education</h2>
+          <p>Empowering the next generation of leaders.</p>
+        </div>
       </div>
     </div>
 
-
-    <!-- Right sign-in card -->
-    <div class="login-right">
-      <div class="login-card" role="form" aria-labelledby="signinTitle">
-        <div class="card-header">
-          <div class="brand-icon" aria-hidden="true">🎒</div>
-          <div>
-            <h3 id="signinTitle">Sign In</h3>
-            <p class="muted">Access your dashboard</p>
-          </div>
+    <!-- Right Side: Form -->
+    <div class="login-form-container">
+      <div class="login-card">
+        <div class="brand-header">
+          <div class="brand-logo">🎓</div>
+          <h1>Welcome Back</h1>
+          <p class="subtitle">Please enter your details to sign in.</p>
         </div>
 
         <form id="loginForm" class="signin-form" novalidate>
-          <label class="field">
-            <span class="label-text">Username / Email</span>
-            <input type="text" id="username" placeholder="you@example.com" autocomplete="username" />
-          </label>
-
-          <label class="field">
-            <span class="label-text">Password</span>
-            <input type="password" id="password" placeholder="Enter your password" autocomplete="current-password" />
-          </label>
-
-          <div class="role-row" role="radiogroup" aria-label="Role Selection">
-            <span class="label-text">Role Selection</span>
-
-            <label class="role" aria-checked="true">
-              <input type="radio" name="role" value="student" checked />
-              <span class="role-icon">👩‍🎓</span>
-              <span class="role-label">Student</span>
-            </label>
-
-            <label class="role">
-              <input type="radio" name="role" value="teacher" />
-              <span class="role-icon">👨‍🏫</span>
-              <span class="role-label">Teacher</span>
-            </label>
-
-            <label class="role">
-              <input type="radio" name="role" value="admin" />
-              <span class="role-icon">🛡️</span>
-              <span class="role-label">Admin</span>
-            </label>
+          <div class="form-group">
+            <label for="username">Username or Email</label>
+            <input type="text" id="username" placeholder="Enter your username" autocomplete="username" />
           </div>
 
-          <div class="row-between">
-            <label class="remember"><input type="checkbox" id="remember" /> Remember me</label>
-            <a href="#" id="forgotLink" class="muted">Forgot password?</a>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="••••••••" autocomplete="current-password" />
           </div>
 
-          <p id="errorMsg" class="error" aria-live="polite"></p>
+          <div class="role-selection">
+            <label class="role-label">Select Role</label>
+            <div class="role-options">
+              <label class="role-option">
+                <input type="radio" name="role" value="student" checked />
+                <span class="role-box">Student</span>
+              </label>
+              <label class="role-option">
+                <input type="radio" name="role" value="teacher" />
+                <span class="role-box">Teacher</span>
+              </label>
+              <label class="role-option">
+                <input type="radio" name="role" value="admin" />
+                <span class="role-box">Admin</span>
+              </label>
+            </div>
+          </div>
 
-          <button type="submit" class="btn-primary" aria-label="Sign In">Sign In</button>
+          <div class="form-actions">
+            <label class="remember-me">
+              <input type="checkbox" id="remember" />
+              <span>Remember for 30 days</span>
+            </label>
+            <a href="#" class="forgot-password">Forgot password?</a>
+          </div>
 
-          <div class="help-row">
-            <a href="#" class="muted">Need help?</a>
+          <p id="errorMsg" class="error-message" aria-live="polite"></p>
+
+          <button type="submit" class="btn-submit">Sign In</button>
+
+          <div class="footer-links">
+            <p>Don't have an account? <a href="#">Contact Administration</a></p>
           </div>
         </form>
       </div>
@@ -84,4 +81,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>
