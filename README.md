@@ -69,9 +69,9 @@ cd School_management
 
 | Role | Username | Password |
 |------|----------|----------|
-| Student | `student` | `student123` |
-| Teacher | `teacher` | `teacher123` |
 | Admin | `admin` | `admin123` |
+| Teacher | `teacher` | `teach123` |
+| Student | `student` | `stud123` |
 
 > These credentials are for demonstration purposes only.
 
