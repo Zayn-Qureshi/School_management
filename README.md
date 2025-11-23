@@ -7,6 +7,10 @@ A modern, responsive school management system with role-based dashboards and a c
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 
+## 🚀 Live Demo
+
+🔗 [Launch the project](https://zayn-qureshi.github.io/School_management/)
+
 ## ✨ Features
 
 ### 🎨 Modern UI/UX Design
@@ -61,13 +65,15 @@ cd School_management
 
 2. Open `index.html` in your web browser
 
-### Demo Credentials
+### 🔐 Demo Credentials
 
 | Role | Username | Password |
 |------|----------|----------|
 | Student | `student` | `student123` |
 | Teacher | `teacher` | `teacher123` |
 | Admin | `admin` | `admin123` |
+
+> These credentials are for demonstration purposes only.
 
 ## 📁 Project Structure
 
